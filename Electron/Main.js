@@ -61,7 +61,7 @@ function startBackend() {
     return;
   }
 
-  const exePath = path.join(process.resourcesPath, "Script", "Main.exe");
+  const exePath = path.join(process.resourcesPath, "Script", "Main", "Main.exe");
 
   const env = { ...process.env };
   const config = store.get("config");

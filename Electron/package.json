@@ -1,6 +1,6 @@
 {
   "name": "floathawk",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "",
   "main": "Main.js",
   "scripts": {
@@ -14,8 +14,8 @@
         "to": "Frontend/dist"
       },
       {
-        "from": "../Script/dist/Main.exe",
-        "to": "Script/Main.exe"
+        "from": "../Script/dist/Main",
+        "to": "Script/Main"
       }
     ],
     "appId": "com.floathawk.app",
