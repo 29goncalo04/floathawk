@@ -1,0 +1,44 @@
+{
+  "name": "floathawk",
+  "version": "1.1.4",
+  "description": "",
+  "main": "Main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "extraResources": [
+      {
+        "from": "../Frontend/dist",
+        "to": "Frontend/dist"
+      },
+      {
+        "from": "../Script/dist/Main.exe",
+        "to": "Script/Main.exe"
+      }
+    ],
+    "appId": "com.floathawk.app",
+    "productName": "FloatHawk",
+    "win": {
+      "target": "nsis",
+      "icon": "Logo.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "deleteAppDataOnUninstall": true
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^41.1.0",
+    "electron-builder": "^26.8.1"
+  },
+  "dependencies": {
+    "electron-store": "^11.0.2"
+  }
+}

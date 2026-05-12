@@ -1,0 +1,190 @@
+.settings_overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.settings_modal {
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 20px;
+  padding: 32px 36px;
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  backdrop-filter: blur(20px);
+  box-shadow:
+    0 0 60px rgba(99, 102, 241, 0.1),
+    0 24px 64px rgba(0, 0, 0, 0.6);
+}
+
+.settings_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings_title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.settings_close {
+  background: none;
+  border: none;
+  color: #64748b;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  transition: color 0.15s;
+  display: flex;
+  align-items: center;
+}
+
+.settings_close:hover {
+  color: #94a3b8;
+}
+
+.settings_section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings_section_header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.settings_section_icon {
+  font-size: 15px;
+  color: #818cf8;
+  flex-shrink: 0;
+}
+
+.settings_section_label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.settings_badge {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 20px;
+}
+
+.settings_badge--ok {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.settings_badge--off {
+  background: rgba(239, 68, 68, 0.1);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.settings_section_desc {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+.settings_row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.settings_input {
+  flex: 1;
+  padding: 11px 16px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 10px;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-family: monospace;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings_input:focus {
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.settings_input::placeholder {
+  color: #475569;
+}
+
+.settings_input--error {
+  border-color: rgba(239, 68, 68, 0.6);
+}
+
+.settings_input--done {
+  border-color: rgba(16, 185, 129, 0.5);
+}
+
+.settings_error {
+  font-size: 13px;
+  color: #f87171;
+  margin: 0;
+}
+
+.settings_btn {
+  border: none;
+  border-radius: 10px;
+  padding: 11px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+  white-space: nowrap;
+}
+
+.settings_btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.settings_btn--primary {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.settings_btn--primary:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.settings_btn--danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  width: 100%;
+}
+
+.settings_btn--danger:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.settings_divider {
+  height: 1px;
+  background: rgba(99, 102, 241, 0.1);
+}

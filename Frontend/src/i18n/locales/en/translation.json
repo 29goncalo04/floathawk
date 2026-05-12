@@ -1,0 +1,315 @@
+{
+  "common": {
+    "back": "Back",
+    "unknown_error": "Unknown error"
+  },
+  "home": {
+    "subtitle": "Built for CS traders who want",
+    "typing_words": ["automation", "speed", "efficiency"],
+    "run_bot": {
+      "title": "Run Bot",
+      "description": "Run the bot to scan the CSFloat market in real time and automatically send high-value opportunities straight to your Telegram, so you never miss a good deal"
+    },
+    "calculate_price": {
+      "title": "Calculate Price",
+      "description": "Get an instant, data-driven price recommendation by entering a skin's ID—helping you list it competitively and maximize your profit"
+    },
+    "update_excel": {
+      "title": "Update Excel",
+      "description": "Automatically update your Excel file with all skins you've traded on CSFloat—if you don't have one yet, you can choose where to create it and get started instantly"
+    }
+  },
+  "run_bot": {
+    "page_title": "Configure Bot",
+    "subtitle": "Set your filters before starting the scanner",
+    "features": {
+      "scan_rate": "Scans every 10–15s",
+      "alerts": "Instant Telegram alerts",
+      "filter": "Multi-stage deal filter"
+    },
+    "float_range": {
+      "title": "Float Range",
+      "min": "Min Float",
+      "max": "Max Float"
+    },
+    "price_range": {
+      "title": "Price Range",
+      "min": "Min Price",
+      "max": "Max Price"
+    },
+    "scanning_label": "Scanning",
+    "balance": {
+      "toggle_label": "Use current balance",
+      "toggle_hint": "Sets max price to your CSFloat wallet",
+      "fetching": "Fetching…",
+      "error": "Could not fetch balance"
+    },
+    "start_btn": "Start Bot",
+    "starting_btn": "Starting...",
+    "validation": {
+      "float_order": "Min float must be less than max float",
+      "valid_price": "Enter a valid price",
+      "valid_max": "Enter a valid max price",
+      "max_gt_min": "Max must be greater than min",
+      "balance_below": "Balance (${{balance}}) is below the min price"
+    }
+  },
+  "bot_running": {
+    "title": "Bot Running",
+    "subtitle": "Monitoring CSFloat for deals",
+    "stop_btn": "Stop Bot",
+    "deal_banner": "Deal sent to Telegram!",
+    "status": {
+      "rate_limited": "Rate Limited — Resumes in {{time}}",
+      "stopped": "Stopped — {{reason}}",
+      "scanning": "Scanning"
+    },
+    "filters": {
+      "title": "Filters",
+      "float": "Float",
+      "price": "Price",
+      "balance": "Balance"
+    },
+    "rejected": {
+      "title": "Recently Rejected",
+      "empty": "Scanning for candidates..."
+    },
+    "deals": {
+      "title": "Deals Found",
+      "empty": "No deals found yet — bot is scanning...",
+      "buy_price": "Buy Price",
+      "float": "Float",
+      "before_section": "Before Fetching Similar Listed Skins",
+      "after_section": "After Fetching Similar Listed Skins",
+      "sell_range": "Sell Range",
+      "profit": "Profit $ (post taxes)",
+      "profit_pct": "Profit % (post taxes)",
+      "float_range_prices": "Prices in Skin's Float Range",
+      "lower_float": "Lower Float Prices",
+      "higher_float": "Higher Float Prices",
+      "similar_listed": "Similar Listed",
+      "similar_float": "Float: ",
+      "similar_price": "Price: "
+    },
+    "modal": {
+      "title": "Bot still running",
+      "body": "The bot will keep scanning in the background. You can come back to this page at any time.",
+      "stay": "Stay here",
+      "go_menu": "Go to menu"
+    },
+    "rejection_reasons": {
+      "not_enough_profit_final": "Not enough profit (final)",
+      "no_similar_listings": "No similar listings in range",
+      "rate_limited_check": "Rate limited (similar check)",
+      "not_enough_profit_pre": "Not enough profit (pre-check)",
+      "profit_too_small_absolute": "Profit too small in absolute terms",
+      "lower_floats_cheaper": "Lower floats sold cheaper",
+      "not_good_price_range": "Not in good price range",
+      "downward_trend": "Downward price trend",
+      "no_recent_sales": "No recent sales in float range",
+      "too_many_stickers": "Too many stickers/charms",
+      "sells_too_slowly": "Sells too slowly",
+      "too_recent_collection": "Too recent collection"
+    },
+    "bot_errors": {
+      "balance_too_low": "Balance is too low to continue scanning",
+      "invalid_api_key": "Invalid API key"
+    }
+  },
+  "calculate_price": {
+    "title": "Calculate Price",
+    "subtitle": "Get a data-driven sell price recommendation for any skin you own",
+    "input_placeholder": "Enter skin ID…",
+    "calculate_btn": "Calculate",
+    "calculating": "Calculating…",
+    "how_to_find": "How do I find my skin ID?",
+    "help": {
+      "from_excel": "From Excel:",
+      "excel_text": " look at the ",
+      "id_column": "id",
+      "excel_suffix": " column in your Trades file",
+      "from_csfloat": "From CSFloat:",
+      "csfloat_text": " open the skin — the ID is the number at the end of the URL, e.g. "
+    },
+    "errors": {
+      "invalid_id": {
+        "title": "Invalid skin ID",
+        "body": "Make sure you entered a valid skin ID"
+      },
+      "rate_limited": {
+        "title": "Too many requests",
+        "body": "CSFloat is rate limiting your requests. Please wait a moment and try again."
+      },
+      "no_similar_listed": {
+        "title": "No similar listings found",
+        "body": "There aren't enough similar skins currently listed to calculate a reliable price range."
+      },
+      "network": {
+        "title": "Connection error",
+        "body": "Could not reach the server. Make sure the backend is running."
+      }
+    },
+    "result": {
+      "purchased_for": "· Purchased for ",
+      "sell_range": "Sell range",
+      "profit": "Profit (post fees)",
+      "profit_pct": "Profit %",
+      "similar_listings": "Similar listings",
+      "col_name": "Name",
+      "col_float": "Float",
+      "col_price": "Price"
+    }
+  },
+  "update_excel": {
+    "setup": {
+      "title": "Set Up Excel File",
+      "subtitle": "Choose a folder where your Trades.xlsm will be created",
+      "btn": "Choose Folder"
+    },
+    "file_missing": {
+      "title": "File Not Found",
+      "subtitle": "Your Excel file was not found at:",
+      "btn": "Re-select Folder"
+    },
+    "ready": {
+      "title": "Update Excel",
+      "file_label": "File location",
+      "run_btn": "Run Update",
+      "open_btn": "Open File",
+      "change_btn": "Change location"
+    },
+    "loading": "Updating your Excel file…",
+    "success": {
+      "title": "Done!",
+      "row_added_one": "{{count}} new row added",
+      "row_added_other": "{{count}} new rows added",
+      "row_updated_one": "{{count}} row updated",
+      "row_updated_other": "{{count}} rows updated",
+      "up_to_date": "Already up to date",
+      "open_btn": "Open File"
+    },
+    "error": {
+      "default": "Error",
+      "retry_btn": "Try Again",
+      "reset_btn": "Reset file (overwrites with blank template)",
+      "401": {
+        "title": "Authentication failed",
+        "body": "Your CSFloat API key is invalid or expired. Open the gear icon in the upper right corner and re-enter your API key."
+      },
+      "404": {
+        "title": "File not found",
+        "body": "The Excel file could not be found. Please re-select the folder."
+      },
+      "500": {
+        "title": "Update failed",
+        "body": "Something went wrong while updating. Make sure the file is not open in another program."
+      },
+      "network": {
+        "title": "Connection error",
+        "body": "Could not reach the server. Make sure the backend is running."
+      }
+    }
+  },
+  "csfloat_gate": {
+    "title": "Connect your CSFloat account",
+    "subtitle": "Required to use all features — takes 30 seconds.",
+    "step_login": "Log in to CSFloat",
+    "step_avatar": "Click your avatar (top right)",
+    "step_developers_1": "Go to ",
+    "step_developers_2": "Developers",
+    "step_api_key": "Create an API key and copy it",
+    "placeholder": "e.g. qwywEAhon...",
+    "checking": "Checking key…",
+    "saved": "CSFloat API key saved. You can now use all features.",
+    "btn_validating": "Validating…",
+    "btn_done": "Enter App →",
+    "btn_idle": "Validate & Save",
+    "network_error": "Network error. Check your internet connection.",
+    "invalid_csfloat_api_key": "Invalid API key — make sure you copied it correctly."
+  },
+  "telegram": {
+    "steps": {
+      "0": "Account",
+      "1": "BotFather",
+      "2": "Start Bot",
+      "3": "New Bot",
+      "4": "Copy Token",
+      "5": "Paste Token"
+    },
+    "nav": {
+      "prev": "← Previous",
+      "next": "Next →",
+      "validating": "Validating…",
+      "connecting": "Connecting…",
+      "finish": "I've sent a message → Finish",
+      "validate": "Validate & Connect"
+    },
+    "step1": {
+      "bullet1": "Download Telegram mobile app.",
+      "bullet2": "Make sure you have a Telegram account and are currently logged in."
+    },
+    "step2": {
+      "bullet1": "Open Telegram and search for @BotFather in the search bar.",
+      "bullet2": "Click on the official BotFather account — it has a blue verified checkmark."
+    },
+    "step3": {
+      "bullet1": "Click the Start button at the bottom of the chat to activate BotFather."
+    },
+    "step4": {
+      "bullet1": "Type /newbot and send the message to BotFather to create a new bot."
+    },
+    "step5": {
+      "bullet1": "Type the name you want to give your bot (e.g. Bot test).",
+      "bullet2": "Choose a username for it — it must end in bot (e.g. test_telegram_04_bot).",
+      "bullet3": "Copy the token from the BotFather message — you will need it in the next step."
+    },
+    "step6": {
+      "title": "Almost there!",
+      "subtitle": "Paste the token you copied from BotFather below.",
+      "placeholder": "e.g. 7312345678:AAFxxxxxxxx",
+      "checking": "Checking token…",
+      "connected_to": "Connected to ",
+      "one_last_step": "One last step",
+      "prompt_1": "Open Telegram, search for ",
+      "prompt_2": ", and send it any message (e.g. ",
+      "prompt_example": "hello",
+      "prompt_3": "). Then click ",
+      "prompt_4": " below.",
+      "connecting": "Connecting…",
+      "no_messages_received": "No messages received yet. Send any message to your bot first.",
+      "network_error": "Network error. Check your internet connection.",
+      "invalid_bot_token": "Invalid bot token.",
+      "unknown_error": "Unknown error."
+    }
+  },
+  "telegram_popup": {
+    "title": "Bot not configured",
+    "description": "To use the market bot, you need to link your Telegram bot. It only takes a minute.",
+    "btn": "Show me how"
+  },
+  "settings_modal": {
+    "title": "Settings",
+    "csfloat": {
+      "label": "CSFloat API Key",
+      "description": "Enter a new key to replace the current one.",
+      "placeholder": "New API key…",
+      "btn_checking": "Checking…",
+      "btn_done": "Saved ✓",
+      "btn_idle": "Save"
+    },
+    "telegram": {
+      "label": "Telegram Bot",
+      "badge_configured": "Configured",
+      "badge_not": "Not configured",
+      "description": "Reset your bot credentials to go through the setup again.",
+      "btn": "Reconfigure Telegram"
+    }
+  },
+  "navbar": {
+    "settings": "Settings"
+  },
+  "app": {
+    "deal_banner": "Deal found — {{skin_name}}",
+    "bot_stopped": "Bot stopped — {{reason}}"
+  }
+}

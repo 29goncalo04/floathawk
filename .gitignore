@@ -1,0 +1,31 @@
+# Node
+node_modules/
+Frontend/dist/
+Electron/dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+Script/dist/
+Script/build/
+Script/Main.patched.spec
+Script/.pyarmor/
+
+# Runtime data
+Data/deals.db
+Data/Timeout.json
+
+# Logs
+*.log
+
+# Env
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

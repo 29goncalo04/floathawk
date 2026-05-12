@@ -1,0 +1,315 @@
+{
+  "common": {
+    "back": "Voltar",
+    "unknown_error": "Erro desconhecido"
+  },
+  "home": {
+    "subtitle": "Feito para traders de CS que querem",
+    "typing_words": ["automação", "velocidade", "eficiência"],
+    "run_bot": {
+      "title": "Iniciar Bot",
+      "description": "Execute o bot para analisar o mercado CSFloat em tempo real e envie automaticamente oportunidades de alto valor para o seu Telegram, para nunca perder um bom negócio"
+    },
+    "calculate_price": {
+      "title": "Calcular Preço",
+      "description": "Obtenha uma recomendação de preço instantânea inserindo o ID de uma skin — ajudando-o a listá-la de forma competitiva e maximizar o lucro"
+    },
+    "update_excel": {
+      "title": "Atualizar Excel",
+      "description": "Atualize automaticamente o seu ficheiro Excel com todas as skins que trocou no CSFloat — se ainda não tiver um, pode escolher onde criá-lo e começar de imediato"
+    }
+  },
+  "run_bot": {
+    "page_title": "Configurar Bot",
+    "subtitle": "Defina os seus filtros antes de iniciar o scanner",
+    "features": {
+      "scan_rate": "Analisa a cada 10–15s",
+      "alerts": "Alertas instantâneos no Telegram",
+      "filter": "Filtro de negócios multi-fase"
+    },
+    "float_range": {
+      "title": "Intervalo de Float",
+      "min": "Float Mínimo",
+      "max": "Float Máximo"
+    },
+    "price_range": {
+      "title": "Intervalo de Preço",
+      "min": "Preço Mínimo",
+      "max": "Preço Máximo"
+    },
+    "scanning_label": "A analisar",
+    "balance": {
+      "toggle_label": "Usar saldo atual",
+      "toggle_hint": "Define o preço máximo como o seu saldo CSFloat",
+      "fetching": "A obter…",
+      "error": "Não foi possível obter o saldo"
+    },
+    "start_btn": "Iniciar Bot",
+    "starting_btn": "A iniciar...",
+    "validation": {
+      "float_order": "O float mínimo deve ser menor que o máximo",
+      "valid_price": "Insira um preço válido",
+      "valid_max": "Insira um preço máximo válido",
+      "max_gt_min": "O máximo deve ser maior que o mínimo",
+      "balance_below": "Saldo (${{balance}}) está abaixo do preço mínimo"
+    }
+  },
+  "bot_running": {
+    "title": "Bot a Correr",
+    "subtitle": "A monitorizar o CSFloat em busca de negócios",
+    "stop_btn": "Parar Bot",
+    "deal_banner": "Negócio enviado para o Telegram!",
+    "status": {
+      "rate_limited": "Limite excedido — Retoma em {{time}}",
+      "stopped": "Parado — {{reason}}",
+      "scanning": "A analisar"
+    },
+    "filters": {
+      "title": "Filtros",
+      "float": "Float",
+      "price": "Preço",
+      "balance": "Saldo"
+    },
+    "rejected": {
+      "title": "Recentemente Rejeitados",
+      "empty": "À procura de candidatos..."
+    },
+    "deals": {
+      "title": "Negócios Encontrados",
+      "empty": "Nenhum negócio encontrado ainda — bot a analisar...",
+      "buy_price": "Preço de Compra",
+      "float": "Float",
+      "before_section": "Antes de Obter Skins Semelhantes Listadas",
+      "after_section": "Após Obter Skins Semelhantes Listadas",
+      "sell_range": "Intervalo de Venda",
+      "profit": "Lucro $ (após taxas)",
+      "profit_pct": "Lucro % (após taxas)",
+      "float_range_prices": "Preços no Intervalo de Float da Skin",
+      "lower_float": "Preços de Skins com Float Inferior",
+      "higher_float": "Preços de Skins com Float Superior",
+      "similar_listed": "Skins Semelhantes Listadas",
+      "similar_float": "Float: ",
+      "similar_price": "Preço: "
+    },
+    "modal": {
+      "title": "Bot ainda a correr",
+      "body": "O bot continuará a analisar em segundo plano. Pode voltar a esta página a qualquer momento.",
+      "stay": "Ficar aqui",
+      "go_menu": "Ir ao menu"
+    },
+    "rejection_reasons": {
+      "not_enough_profit_final": "Lucro insuficiente (final)",
+      "no_similar_listings": "Sem listagens similares no intervalo",
+      "rate_limited_check": "Limite de pedidos (verificação similar)",
+      "not_enough_profit_pre": "Lucro insuficiente (pré-verificação)",
+      "profit_too_small_absolute": "Lucro demasiado pequeno em termos absolutos",
+      "lower_floats_cheaper": "Floats inferiores vendidos mais barato",
+      "not_good_price_range": "Fora do intervalo de preço",
+      "downward_trend": "Tendência de preço em queda",
+      "no_recent_sales": "Sem vendas recentes no intervalo de float",
+      "too_many_stickers": "Demasiados stickers/charms",
+      "sells_too_slowly": "Vende muito lentamente",
+      "too_recent_collection": "Coleção demasiado recente"
+    },
+    "bot_errors": {
+      "balance_too_low": "Saldo insuficiente para continuar o scan",
+      "invalid_api_key": "Chave API inválida"
+    }
+  },
+  "calculate_price": {
+    "title": "Calcular Preço",
+    "subtitle": "Obtenha uma recomendação de preço de venda baseada em dados para qualquer skin que possua",
+    "input_placeholder": "Insira o ID da skin…",
+    "calculate_btn": "Calcular",
+    "calculating": "A calcular…",
+    "how_to_find": "Como encontro o ID da minha skin?",
+    "help": {
+      "from_excel": "Do Excel:",
+      "excel_text": " veja a coluna ",
+      "id_column": "id",
+      "excel_suffix": " no seu ficheiro de Trades",
+      "from_csfloat": "Do CSFloat:",
+      "csfloat_text": " abra a skin no CS Float — o ID é o número no final do URL, ex. "
+    },
+    "errors": {
+      "invalid_id": {
+        "title": "ID de skin inválido",
+        "body": "Certifique-se de que inseriu um ID de skin válido"
+      },
+      "rate_limited": {
+        "title": "Demasiados pedidos",
+        "body": "O CSFloat está a limitar os seus pedidos. Aguarde um momento e tente novamente."
+      },
+      "no_similar_listed": {
+        "title": "Nenhuma listagem similar encontrada",
+        "body": "Não existem skins similares suficientes listadas para calcular um intervalo de preço fiável."
+      },
+      "network": {
+        "title": "Erro de ligação",
+        "body": "Não foi possível alcançar o servidor. Certifique-se de que o backend está a correr."
+      }
+    },
+    "result": {
+      "purchased_for": "· Comprada por ",
+      "sell_range": "Intervalo de venda",
+      "profit": "Lucro (após taxas)",
+      "profit_pct": "Lucro %",
+      "similar_listings": "Listagens semelhantes",
+      "col_name": "Nome",
+      "col_float": "Float",
+      "col_price": "Preço"
+    }
+  },
+  "update_excel": {
+    "setup": {
+      "title": "Configurar Ficheiro Excel",
+      "subtitle": "Escolha uma pasta onde o seu Trades.xlsm será criado",
+      "btn": "Escolher Pasta"
+    },
+    "file_missing": {
+      "title": "Ficheiro Não Encontrado",
+      "subtitle": "O seu ficheiro Excel não foi encontrado em:",
+      "btn": "Selecionar Nova Pasta"
+    },
+    "ready": {
+      "title": "Atualizar Excel",
+      "file_label": "Localização do ficheiro",
+      "run_btn": "Executar Atualização",
+      "open_btn": "Abrir Ficheiro",
+      "change_btn": "Alterar localização"
+    },
+    "loading": "A atualizar o seu ficheiro Excel…",
+    "success": {
+      "title": "Concluído!",
+      "row_added_one": "{{count}} nova linha adicionada",
+      "row_added_other": "{{count}} novas linhas adicionadas",
+      "row_updated_one": "{{count}} linha atualizada",
+      "row_updated_other": "{{count}} linhas atualizadas",
+      "up_to_date": "Já está atualizado",
+      "open_btn": "Abrir Ficheiro"
+    },
+    "error": {
+      "default": "Erro",
+      "retry_btn": "Tentar novamente",
+      "reset_btn": "Redefinir ficheiro (substitui pelo modelo em branco)",
+      "401": {
+        "title": "Autenticação falhada",
+        "body": "A sua chave API do CSFloat é inválida ou expirou. Abra o ícone de engrenagem no canto superior direito e insira a sua chave API novamente."
+      },
+      "404": {
+        "title": "Ficheiro não encontrado",
+        "body": "O ficheiro Excel não foi encontrado. Por favor, selecione a pasta novamente."
+      },
+      "500": {
+        "title": "Atualização falhada",
+        "body": "Algo correu mal durante a atualização. Certifique-se de que o ficheiro não está aberto noutro programa."
+      },
+      "network": {
+        "title": "Erro de ligação",
+        "body": "Não foi possível alcançar o servidor. Certifique-se de que o backend está a correr."
+      }
+    }
+  },
+  "csfloat_gate": {
+    "title": "Conecte a sua conta CSFloat",
+    "subtitle": "Necessário para usar todas as funcionalidades — leva 30 segundos.",
+    "step_login": "Inicie sessão no CSFloat",
+    "step_avatar": "Clique no seu avatar (canto superior direito)",
+    "step_developers_1": "Vá a ",
+    "step_developers_2": "Developers",
+    "step_api_key": "Crie uma chave API e copie-a",
+    "placeholder": "ex. qwywEAhon...",
+    "checking": "A verificar chave…",
+    "saved": "Chave API do CSFloat guardada. Pode agora usar todas as funcionalidades.",
+    "btn_validating": "A validar…",
+    "btn_done": "Entrar →",
+    "btn_idle": "Validar e Guardar",
+    "network_error": "Erro de rede. Verifique a sua ligação à internet.",
+    "invalid_csfloat_api_key": "Chave API inválida — certifique-se de que a copiou corretamente."
+  },
+  "telegram": {
+    "steps": {
+      "0": "Conta",
+      "1": "BotFather",
+      "2": "Iniciar Bot",
+      "3": "Novo Bot",
+      "4": "Copiar Token",
+      "5": "Colar Token"
+    },
+    "nav": {
+      "prev": "← Anterior",
+      "next": "Seguinte →",
+      "validating": "A validar…",
+      "connecting": "A ligar…",
+      "finish": "Enviei uma mensagem → Concluir",
+      "validate": "Validar e Ligar"
+    },
+    "step1": {
+      "bullet1": "Descarregue a aplicação móvel do Telegram.",
+      "bullet2": "Certifique-se de que tem uma conta Telegram e que está atualmente com sessão iniciada."
+    },
+    "step2": {
+      "bullet1": "Abra o Telegram e pesquise por @BotFather na barra de pesquisa.",
+      "bullet2": "Clique na conta oficial do BotFather — tem uma marca de verificação azul."
+    },
+    "step3": {
+      "bullet1": "Clique no botão Iniciar na parte inferior do chat para ativar o BotFather."
+    },
+    "step4": {
+      "bullet1": "Escreva /newbot e envie a mensagem ao BotFather para criar um novo bot."
+    },
+    "step5": {
+      "bullet1": "Escreva o nome que pretende dar ao seu bot (ex. Bot teste).",
+      "bullet2": "Escolha um nome de utilizador — deve terminar em bot (ex. teste_telegram_04_bot).",
+      "bullet3": "Copie o token da mensagem do BotFather — irá precisar dele no próximo passo."
+    },
+    "step6": {
+      "title": "Quase lá!",
+      "subtitle": "Cole o token que copiou do BotFather abaixo.",
+      "placeholder": "ex. 7312345678:AAFxxxxxxxx",
+      "checking": "A verificar token…",
+      "connected_to": "Ligado a ",
+      "one_last_step": "Último passo",
+      "prompt_1": "Abra o Telegram, pesquise por ",
+      "prompt_2": " e envie-lhe qualquer mensagem (ex. ",
+      "prompt_example": "olá",
+      "prompt_3": "). Depois clique em ",
+      "prompt_4": " abaixo.",
+      "connecting": "A ligar…",
+      "no_messages_received": "Nenhuma mensagem recebida ainda. Envie qualquer mensagem ao seu bot primeiro.",
+      "network_error": "Erro de rede. Verifique a sua ligação à internet.",
+      "invalid_bot_token": "Token do bot inválido.",
+      "unknown_error": "Erro desconhecido."
+    }
+  },
+  "telegram_popup": {
+    "title": "Bot não configurado",
+    "description": "Para usar o bot de mercado, precisa de ligar o seu bot do Telegram. Demora apenas um minuto.",
+    "btn": "Mostrar como"
+  },
+  "settings_modal": {
+    "title": "Definições",
+    "csfloat": {
+      "label": "Chave API do CSFloat",
+      "description": "Insira uma nova chave para substituir a atual.",
+      "placeholder": "Nova chave API…",
+      "btn_checking": "A verificar…",
+      "btn_done": "Guardado ✓",
+      "btn_idle": "Guardar"
+    },
+    "telegram": {
+      "label": "Bot do Telegram",
+      "badge_configured": "Configurado",
+      "badge_not": "Não configurado",
+      "description": "Reinicie as suas credenciais do bot para passar novamente pelo processo de configuração.",
+      "btn": "Reconfigurar Telegram"
+    }
+  },
+  "navbar": {
+    "settings": "Definições"
+  },
+  "app": {
+    "deal_banner": "Negócio encontrado — {{skin_name}}",
+    "bot_stopped": "Bot parado — {{reason}}"
+  }
+}

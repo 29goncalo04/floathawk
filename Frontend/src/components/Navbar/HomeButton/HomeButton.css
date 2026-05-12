@@ -1,0 +1,22 @@
+.home_button {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.home_button:hover {
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	background: #4f4e4e;
+	color: #ffffff;
+	transform: translateY(-1px);
+}
+
+.home_button:active {
+	transform: translateY(1px);
+}

@@ -1,0 +1,194 @@
+.ue_page {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px 80px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Phase content ───────────────────────────── */
+
+.ue_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  max-width: 480px;
+  width: 100%;
+}
+
+/* ── Icons ───────────────────────────────────── */
+
+.ue_icon_excel {
+  font-size: 52px;
+  color: #22c55e;
+  margin-bottom: 4px;
+}
+
+.ue_icon_warn {
+  font-size: 46px;
+  color: #f59e0b;
+  margin-bottom: 4px;
+}
+
+.ue_icon_success {
+  font-size: 52px;
+  color: #34d399;
+  margin-bottom: 4px;
+}
+
+/* ── Text ────────────────────────────────────── */
+
+.ue_title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.ue_subtitle {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.ue_path_label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #475569;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ue_path {
+  font-size: 12px;
+  font-family: monospace;
+  color: #94a3b8;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 8px;
+  padding: 10px 16px;
+  width: 100%;
+  word-break: break-all;
+  text-align: left;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ── Buttons ─────────────────────────────────── */
+
+.ue_btn_primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  min-width: 160px;
+}
+
+.ue_btn_primary:hover {
+  background: #2563eb;
+}
+
+.ue_btn_row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.ue_btn_secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.ue_btn_secondary:hover {
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #e2e8f0;
+}
+
+.ue_btn_ghost {
+  background: transparent;
+  border: none;
+  color: #475569;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+
+.ue_btn_ghost:hover {
+  color: #94a3b8;
+}
+
+/* ── Loading ─────────────────────────────────── */
+
+.ue_spinner {
+  width: 32px;
+  height: 32px;
+  border: 2px solid rgba(99, 102, 241, 0.2);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: ue_spin 0.7s linear infinite;
+}
+
+@keyframes ue_spin {
+  to { transform: rotate(360deg); }
+}
+
+.ue_loading_text {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ── Back button ─────────────────────────────── */
+
+.ue_back_btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 13px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  z-index: 10;
+}
+
+.ue_back_btn:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  color: #e2e8f0;
+}

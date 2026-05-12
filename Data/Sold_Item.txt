@@ -1,0 +1,123 @@
+{
+  "trades": [
+    {
+      "id": "942370460685960795",
+      "created_at": "2026-02-13T10:43:46.224514Z",
+      "buyer_id": "76561199422657138",
+      "buyer": {
+        "avatar": "https://avatars.steamstatic.com/368eb2d9326d228633a9086307dc2be1a1f596cf_full.jpg",
+        "away": false,
+        "flags": 48,
+        "online": false,
+        "stall_public": false,
+        "statistics": {
+          "median_trade_time": 485,
+          "total_avoided_trades": 0,
+          "total_failed_trades": 1,
+          "total_trades": 6,
+          "total_verified_trades": 5
+        },
+        "steam_id": "76561199422657138",
+        "username": "KolioKukata"
+      },
+      "seller_id": "76561198993508646",
+      "seller": {
+        "avatar": "https://avatars.steamstatic.com/6ab9227a23cb4add9f5551671dfc51a126b2b421_full.jpg",
+        "away": false,
+        "flags": 48,
+        "online": false,
+        "stall_public": false,
+        "statistics": {
+          "median_trade_time": 101,
+          "total_avoided_trades": 0,
+          "total_failed_trades": 4,
+          "total_trades": 79,
+          "total_verified_trades": 75
+        },
+        "steam_id": "76561198993508646",
+        "username": "/gOnÇaLo\\  |  SKINS"
+      },
+      "contract_id": "941778415084766810",
+      "accepted_at": "2026-02-13T10:44:41.639388Z",
+      "state": "pending",
+      "verification_mode": "escrow",
+      "steam_offer": {
+        "id": "8850948282",
+        "state": 3,
+        "is_from_seller": false,
+        "can_cancel_at": "2026-02-14T04:44:41.639388Z",
+        "sent_at": "2026-02-13T10:44:44.318245Z",
+        "deadline_at": "2026-02-13T12:44:41.639388Z",
+        "updated_at": "2026-02-13T10:44:54Z"
+      },
+      "verify_sale_at": "2026-02-22T08:00:00Z",
+      "inventory_check_status": 1,
+      "trade_protection_ends_at": "2026-02-21T08:00:00Z",
+      "contract": {
+        "id": "941778415084766810",
+        "created_at": "2026-02-11T19:31:11.553276Z",
+        "type": "buy_now",
+        "price": 615,
+        "state": "sold",
+        "seller": {
+          "away": false,
+          "flags": 48,
+          "obfuscated_id": "2142517266095920082",
+          "online": false,
+          "stall_public": false,
+          "statistics": {
+            "median_trade_time": 101,
+            "total_avoided_trades": 0,
+            "total_failed_trades": 4,
+            "total_trades": 79,
+            "total_verified_trades": 75
+          }
+        },
+        "reference": {
+          "base_price": 576,
+          "float_factor": 1.0566128,
+          "predicted_price": 609,
+          "quantity": 885,
+          "last_updated": "2026-02-13T06:09:14.005708Z"
+        },
+        "item": {
+          "asset_id": "49439551570",
+          "def_index": 4,
+          "paint_index": 1208,
+          "paint_seed": 608,
+          "float_value": 0.205493450164795,
+          "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyL2kpnj9h1c4_2tY5t-KPmdAWWF_uNztOh8QmflzR50sDnXzdv9I3iTOwdzAsZxE7FcsUW7xNPkMeyx4QTYiI5CnCj9kGoXuamHlTQY",
+          "d_param": "7234162548791707052",
+          "is_stattrak": false,
+          "is_souvenir": false,
+          "rarity": 5,
+          "quality": 4,
+          "market_hash_name": "Glock-18 | Shinobu (Field-Tested)",
+          "tradable": 0,
+          "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420B8092805300438E0D9C9F20340E00478461C07",
+          "cs2_screenshot_id": "8220877395709884931",
+          "cs2_screenshot_at": "2026-02-11T19:31:20.702906Z",
+          "is_commodity": false,
+          "type": "skin",
+          "rarity_name": "Classified",
+          "type_name": "Skin",
+          "item_name": "Glock-18 | Shinobu",
+          "wear_name": "Field-Tested",
+          "description": "It has been custom painted with a woman on the slide wearing SR Tech \\\"Premium\\\" contact lenses.\\n\\n\u003Ci\u003E\\\"SR Tech—helping you stay focused one engagement at a time\\\"\u003C/i\u003E",
+          "collection": "The Fever Collection",
+          "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000180420B8092805300438E0D9C9F20340E00478461C07",
+          "gs_sig": "68b9d1b33751bf2b8076"
+        },
+        "is_seller": false,
+        "is_watchlisted": false,
+        "watchers": 0,
+        "sold_at": "2026-02-13T10:43:43.353892Z"
+      },
+      "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=1462391410&token=22Ip2D5t",
+      "trade_token": "22Ip2D5t",
+      "wait_for_cancel_ping": false,
+      "is_settlement_period": false
+    }
+  ],
+  "count": 77
+}

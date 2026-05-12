@@ -1,0 +1,550 @@
+/* ── Page ─────────────────────────────────────── */
+
+.rb_page {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 32px 28px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ── Header ──────────────────────────────────── */
+
+.rb_header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.rb_title_row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.rb_title_icon {
+  font-size: 30px;
+  color: #818cf8;
+  filter: drop-shadow(0 0 10px rgba(99,102,241,0.55));
+}
+
+.rb_title {
+  font-size: 27px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(90deg, #818cf8, #6366f1, #a78bfa);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rb_subtitle {
+  font-size: 13px;
+  color: #475569;
+  margin: 0;
+}
+
+/* ── Cards column ────────────────────────────── */
+
+.rb_cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 680px;
+  margin-bottom: 20px;
+}
+
+.rb_card {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 18px;
+  padding: 20px 28px 18px;
+  backdrop-filter: blur(18px);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rb_card:hover {
+  border-color: rgba(99, 102, 241, 0.32);
+  box-shadow: 0 0 32px rgba(99, 102, 241, 0.07);
+}
+
+.rb_card_title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #475569;
+  margin: 0;
+}
+
+.rb_card_divider {
+  height: 1px;
+  background: rgba(99, 102, 241, 0.1);
+  margin: 0 -2px;
+}
+
+/* ── Slider ──────────────────────────────────── */
+
+.rb_slider_wrap {
+  padding: 0 8px;
+}
+
+/* ── Condition zones ─────────────────────────── */
+
+.rb_zones {
+  display: flex;
+  gap: 4px;
+}
+
+.rb_zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.rb_zone_bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 3px;
+  transition: opacity 0.2s ease;
+}
+
+.rb_zone_label {
+  font-size: 11px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+/* ── Float inputs ────────────────────────────── */
+
+.rb_float_inputs {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.rb_float_sep {
+  font-size: 18px;
+  color: #334155;
+  padding-bottom: 12px;
+  flex-shrink: 0;
+}
+
+/* ── Condition pills row ─────────────────────── */
+
+.rb_conditions_row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rb_conditions_label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.rb_condition_pills {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.rb_condition_pill {
+  display: inline-flex;
+  align-items: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid;
+}
+
+/* ── Price inputs ────────────────────────────── */
+
+.rb_price_inputs {
+  display: flex;
+  gap: 14px;
+}
+
+/* ── Shared input group ──────────────────────── */
+
+.rb_input_group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.rb_input_group--full {
+  flex: 1;
+}
+
+.rb_input_label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.rb_input {
+  width: 100%;
+  padding: 13px 16px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  border-radius: 10px;
+  color: #e2e8f0;
+  font-size: 15px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rb_input_mono {
+  font-family: monospace;
+}
+
+.rb_input:focus {
+  border-color: rgba(99, 102, 241, 0.55);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.rb_input::placeholder {
+  color: #334155;
+}
+
+.rb_input--locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.rb_input--locked:focus {
+  border-color: rgba(99, 102, 241, 0.22);
+  box-shadow: none;
+}
+
+/* ── Prefix wrap ($) ─────────────────────────── */
+
+.rb_prefix_wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(99, 102, 241, 0.22);
+  border-radius: 10px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.rb_prefix_wrap:focus-within {
+  border-color: rgba(99, 102, 241, 0.55);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.rb_prefix {
+  padding-left: 16px;
+  font-size: 15px;
+  color: #475569;
+  pointer-events: none;
+  flex-shrink: 0;
+  transform: translateY(-2.5px);
+}
+
+.rb_prefix_wrap .rb_input {
+  border: none;
+  background: transparent;
+  padding-left: 8px;
+  box-shadow: none;
+}
+
+.rb_prefix_wrap .rb_input:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.rb_prefix_wrap:has(.rb_input--locked) {
+  opacity: 0.55;
+}
+
+.rb_prefix_wrap .rb_input--locked {
+  opacity: 1;
+}
+
+.rb_prefix_wrap .rb_input--locked:focus {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.rb_lock_icon {
+  position: absolute;
+  right: 14px;
+  font-size: 14px;
+  color: #334155;
+  pointer-events: none;
+}
+
+/* ── Field error ─────────────────────────────── */
+
+.rb_field_error {
+  margin: 0;
+  font-size: 11px;
+  color: #f87171;
+}
+
+/* ── Balance section ─────────────────────────── */
+
+.rb_balance_section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rb_balance_feedback {
+  padding-left: 2px;
+}
+
+/* ── Balance toggle ──────────────────────────── */
+
+.rb_toggle_wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.rb_toggle {
+  position: relative;
+  width: 38px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.rb_toggle_input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.rb_toggle_knob {
+  position: absolute;
+  inset: 0;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+  border-radius: 22px;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.rb_toggle_knob::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  background: #475569;
+  border-radius: 50%;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.rb_toggle--on .rb_toggle_knob {
+  background: rgba(99, 102, 241, 0.3);
+  border-color: rgba(99, 102, 241, 0.6);
+}
+
+.rb_toggle--on .rb_toggle_knob::after {
+  transform: translateX(16px);
+  background: #818cf8;
+}
+
+.rb_toggle--loading .rb_toggle_knob {
+  opacity: 0.5;
+}
+
+.rb_toggle_wrap:hover .rb_toggle_knob {
+  border-color: rgba(99, 102, 241, 0.45);
+}
+
+.rb_toggle_text_group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rb_toggle_label {
+  font-size: 13px;
+  color: #94a3b8;
+  user-select: none;
+  line-height: 1;
+}
+
+.rb_toggle_hint {
+  font-size: 11px;
+  color: #334155;
+  user-select: none;
+  line-height: 1;
+}
+
+/* ── Balance badge ───────────────────────────── */
+
+.rb_balance_badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 20px;
+  padding: 4px 11px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #a5b4fc;
+}
+
+/* ── Balance status (loading / error) ────────── */
+
+.rb_balance_status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.rb_balance_status--loading {
+  color: #64748b;
+}
+
+.rb_balance_status--error {
+  color: #f87171;
+}
+
+.rb_spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(99, 102, 241, 0.2);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: rb_spin 0.65s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes rb_spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Start Bot button ────────────────────────── */
+
+.rb_start_btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: linear-gradient(135deg, #4f46e5, #6366f1, #818cf8);
+  color: #fff;
+  border: none;
+  border-radius: 14px;
+  padding: 15px 48px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  box-shadow: 0 4px 24px rgba(99, 102, 241, 0.38);
+  transition: box-shadow 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.rb_start_btn:hover {
+  box-shadow: 0 6px 36px rgba(99, 102, 241, 0.58);
+}
+
+.rb_start_btn--loading {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.rb_start_spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: rb_spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes rb_spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Feature chips ───────────────────────────── */
+
+.rb_features {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.rb_feature {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  border-radius: 20px;
+  padding: 7px 16px;
+  font-size: 12px;
+  color: #64748b;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.rb_feature:hover {
+  border-color: rgba(99, 102, 241, 0.28);
+  color: #94a3b8;
+}
+
+.rb_feature svg {
+  color: #6366f1;
+  flex-shrink: 0;
+}
+
+/* ── Back button ─────────────────────────────── */
+
+.rb_back_btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 13px;
+  padding: 7px 14px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  z-index: 10;
+}
+
+.rb_back_btn:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  color: #e2e8f0;
+}

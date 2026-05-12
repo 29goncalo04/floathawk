@@ -1,0 +1,75 @@
+.tutorial_page {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 48px 28px;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.tutorial_stepper_wrap {
+  width: 100%;
+  max-width: 900px;
+  flex-shrink: 0;
+}
+
+.carousel_wrapper {
+  width: 100%;
+  max-width: 900px;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel_slide {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+.carousel_nav {
+  display: flex;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.nav_btn {
+  padding: 11px 30px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.nav_btn--prev {
+  background: transparent;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #94a3b8;
+}
+
+.nav_btn--prev:hover:not(:disabled) {
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #e2e8f0;
+}
+
+.nav_btn--prev:disabled {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+.nav_btn--next {
+  background: #3b82f6;
+  border: 1px solid transparent;
+  color: white;
+}
+
+.nav_btn--next:hover {
+  background: #2563eb;
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.4);
+}

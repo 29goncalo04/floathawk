@@ -1,0 +1,123 @@
+{
+  "trades": [
+    {
+      "id": "941398953411349890",
+      "created_at": "2026-02-10T18:23:20.840158Z",
+      "buyer_id": "76561198993508646",
+      "buyer": {
+        "avatar": "https://avatars.steamstatic.com/6ab9227a23cb4add9f5551671dfc51a126b2b421_full.jpg",
+        "away": false,
+        "flags": 48,
+        "online": false,
+        "stall_public": false,
+        "statistics": {
+          "median_trade_time": 101,
+          "total_avoided_trades": 0,
+          "total_failed_trades": 4,
+          "total_trades": 79,
+          "total_verified_trades": 75
+        },
+        "steam_id": "76561198993508646",
+        "username": "/gOnÇaLo\\  |  SKINS"
+      },
+      "seller_id": "76561199065674246",
+      "seller": {
+        "avatar": "https://avatars.steamstatic.com/84282b3b9fb103418489f913e2b1d5d2881e681d_full.jpg",
+        "away": false,
+        "flags": 48,
+        "online": false,
+        "stall_public": false,
+        "statistics": {
+          "median_trade_time": 129,
+          "total_avoided_trades": 0,
+          "total_failed_trades": 0,
+          "total_trades": 6,
+          "total_verified_trades": 6
+        },
+        "steam_id": "76561199065674246",
+        "username": "chocospinn"
+      },
+      "contract_id": "941398214509202861",
+      "accepted_at": "2026-02-10T18:24:07.18333Z",
+      "state": "pending",
+      "verification_mode": "escrow",
+      "steam_offer": {
+        "id": "8844425010",
+        "state": 3,
+        "is_from_seller": false,
+        "can_cancel_at": "2026-02-11T12:24:07.18333Z",
+        "sent_at": "2026-02-10T18:24:13.846329Z",
+        "deadline_at": "2026-02-10T20:24:07.18333Z",
+        "updated_at": "2026-02-10T18:24:20Z"
+      },
+      "verify_sale_at": "2026-02-19T08:00:00Z",
+      "inventory_check_status": 1,
+      "trade_protection_ends_at": "2026-02-18T08:00:00Z",
+      "contract": {
+        "id": "941398214509202861",
+        "created_at": "2026-02-10T18:20:24.672785Z",
+        "type": "buy_now",
+        "price": 594,
+        "state": "sold",
+        "seller": {
+          "away": false,
+          "flags": 48,
+          "obfuscated_id": "15869730796813520370",
+          "online": false,
+          "stall_public": false,
+          "statistics": {
+            "median_trade_time": 129,
+            "total_avoided_trades": 0,
+            "total_failed_trades": 0,
+            "total_trades": 6,
+            "total_verified_trades": 6
+          }
+        },
+        "reference": {
+          "base_price": 502,
+          "float_factor": 1.1975273,
+          "predicted_price": 601,
+          "quantity": 1093,
+          "last_updated": "2026-02-10T18:13:32.245718Z"
+        },
+        "item": {
+          "asset_id": "49284225062",
+          "def_index": 61,
+          "paint_index": 1173,
+          "paint_seed": 379,
+          "float_value": 0.185577839612961,
+          "icon_url": "i0CoZ81Ui0m-9KwlBY1L_18myuGuq1wfhWSaZgMttyVfPaERSR0Wqmu7LAocGIGz3UqlXOLrxM-vMGmW8VNxu5Dx60noTyLkjYbf7itX6vytbbZSNeODHViUzulxqd5kSi26gBBp42mDz939J32VZwFyA8FxReBesRO8wdK0ZrzitQ2K2oMTzCWviCMb5jErvbgcxKeE5g",
+          "d_param": "5215954428814274977",
+          "is_stattrak": false,
+          "is_souvenir": false,
+          "rarity": 5,
+          "quality": 4,
+          "market_hash_name": "USP-S | Jawbreaker (Field-Tested)",
+          "tradable": 0,
+          "inspect_link": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D20950928053004389E90F8F10340FB0251BF654E",
+          "cs2_screenshot_id": "2137917964120400582",
+          "cs2_screenshot_at": "2026-02-10T18:21:30.509652Z",
+          "is_commodity": false,
+          "type": "skin",
+          "rarity_name": "Classified",
+          "type_name": "Skin",
+          "item_name": "USP-S | Jawbreaker",
+          "wear_name": "Field-Tested",
+          "description": "This custom painted USP-S uses high gloss paint and depicts a dog barking from the grip to the silencer. The silencer reads \\\"GOOD DOGGY\\\".\\n\\n\u003Ci\u003EI said \\\"sit\\\"!\u003C/i\u003E",
+          "collection": "The Kilowatt Collection",
+          "serialized_inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%2000183D20950928053004389E90F8F10340FB0251BF654E",
+          "gs_sig": "704c5cf2bf8fb06c840a"
+        },
+        "is_seller": false,
+        "is_watchlisted": false,
+        "watchers": 0,
+        "sold_at": "2026-02-10T18:23:19.493564Z"
+      },
+      "trade_url": "https://steamcommunity.com/tradeoffer/new/?partner=1033242918&token=MbV123-I",
+      "trade_token": "MbV123-I",
+      "wait_for_cancel_ping": false,
+      "is_settlement_period": false
+    }
+  ],
+  "count": 44
+}

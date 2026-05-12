@@ -1,0 +1,205 @@
+.csgate_page {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+}
+
+.csgate_card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 20px;
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 0 60px rgba(99, 102, 241, 0.12),
+    0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+.csgate_icon_wrap {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.csgate_icon {
+  font-size: 26px;
+  color: #818cf8;
+}
+
+.csgate_header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.csgate_title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+.csgate_subtitle {
+  font-size: 15px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.csgate_state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.csgate_bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+}
+
+.csgate_bullets li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #94a3b8;
+}
+
+.csgate_bullets li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(99, 102, 241, 0.6);
+  flex-shrink: 0;
+}
+
+.csgate_bullets strong {
+  color: #c7d2fe;
+  font-weight: 600;
+}
+
+.csgate_input {
+  width: 100%;
+  padding: 14px 20px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 10px;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-family: monospace;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.csgate_input:focus {
+  border-color: rgba(99, 102, 241, 0.6);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.csgate_input::placeholder {
+  color: #475569;
+}
+
+.csgate_input--error {
+  border-color: rgba(239, 68, 68, 0.6);
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.csgate_error {
+  color: #f87171;
+  font-size: 13px;
+  margin: 0;
+  text-align: center;
+}
+
+.csgate_spinner_row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.csgate_spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(99, 102, 241, 0.2);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: csgate_spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes csgate_spin {
+  to { transform: rotate(360deg); }
+}
+
+.csgate_hint {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.csgate_done_icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  border: 2px solid rgba(16, 185, 129, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #34d399;
+  font-weight: 700;
+}
+
+.csgate_done_text {
+  font-size: 15px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.csgate_btn {
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 32px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  max-width: 320px;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.csgate_btn:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.csgate_btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

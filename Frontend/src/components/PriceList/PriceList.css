@@ -1,0 +1,22 @@
+.br_pricelist {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.br_pricelist_chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.br_pricelist_chip {
+  font-size: 11px;
+  font-weight: 500;
+  color: #94a3b8;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 6px;
+  padding: 2px 7px;
+  font-family: monospace;
+}
