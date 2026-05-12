@@ -75,16 +75,16 @@ Built for commercial distribution — complete with a Windows NSIS installer, DP
 
 ```
 ┌──────────────────────── Electron 41 ────────────────────────────┐
-│                                                                   │
+│                                                                 │
 │   React 19 (Vite)       ◄──── IPC ────►   Electron Main         │
-│   MUI · Framer Motion                      safeStorage (DPAPI)   │
-│   react-i18next (4 langs)                                        │
-│           │                                                       │
-│        HTTP + SSE                                                 │
-│           ▼                                                       │
-│   FastAPI (Python / uvicorn)                                      │
-│           │                                                       │
-└───────────┼───────────────────────────────────────────────────────┘
+│   MUI · Framer Motion                      safeStorage (DPAPI)  │
+│   react-i18next (4 langs)                                       │
+│           │                                                     │
+│        HTTP + SSE                                               │
+│           ▼                                                     │
+│   FastAPI (Python / uvicorn)                                    │
+│           │                                                     │
+└───────────┼─────────────────────────────────────────────────────┘
             │
      ┌──────┴──────────────────────────────────┐
      ▼                                         ▼
@@ -163,5 +163,5 @@ Contact: goncalocruz2910@gmail.com
 
 ## License
 
-© 2025 Gonçalo Cruz — All Rights Reserved.  
+© 2026 Gonçalo Cruz — All Rights Reserved.  
 Distributed as a commercial product. Source code in this repository is provided for reference only and may not be copied, modified, or redistributed.
