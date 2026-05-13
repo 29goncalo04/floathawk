@@ -254,15 +254,6 @@ export default function BotRunning() {
                         <span className="br_acc_name">{deal.skin_name}</span>
                         <div className="br_acc_header_right">
                           <span className="br_acc_price">${deal.price?.toFixed(2)}</span>
-                          {deal.skin_id && (
-                            <button
-                              className="br_acc_link_btn"
-                              onClick={(e) => { e.stopPropagation(); window.api.openExternal(`https://csfloat.com/item/${deal.skin_id}`); }}
-                              title="View on CSFloat"
-                            >
-                              <LuExternalLink size={13} />
-                            </button>
-                          )}
                           <span className={`br_acc_chevron ${isOpen ? "br_acc_chevron--open" : ""}`}>›</span>
                         </div>
                       </div>
@@ -278,15 +269,26 @@ export default function BotRunning() {
                             style={{ overflow: "hidden" }}
                           >
                             <div className="br_acc_body_inner">
-                              <div className="br_acc_row">
-                                <div className="br_acc_stat">
-                                  <span className="br_acc_stat_label">{t("bot_running.deals.buy_price")}</span>
-                                  <span className="br_acc_stat_value">${deal.price?.toFixed(2)}</span>
+                              <div className="br_acc_row br_acc_row--spaced">
+                                <div className="br_acc_row">
+                                  <div className="br_acc_stat">
+                                    <span className="br_acc_stat_label">{t("bot_running.deals.buy_price")}</span>
+                                    <span className="br_acc_stat_value">${deal.price?.toFixed(2)}</span>
+                                  </div>
+                                  <div className="br_acc_stat">
+                                    <span className="br_acc_stat_label">{t("bot_running.deals.float")}</span>
+                                    <span className="br_acc_stat_value br_mono">{deal.float_val?.toFixed(5)}</span>
+                                  </div>
                                 </div>
-                                <div className="br_acc_stat">
-                                  <span className="br_acc_stat_label">{t("bot_running.deals.float")}</span>
-                                  <span className="br_acc_stat_value br_mono">{deal.float_val?.toFixed(5)}</span>
-                                </div>
+                                {deal.skin_id && (
+                                  <button
+                                    className="br_acc_csfloat_btn"
+                                    onClick={(e) => { e.stopPropagation(); window.api.openExternal(`https://csfloat.com/item/${deal.skin_id}`); }}
+                                  >
+                                    <LuExternalLink size={12} />
+                                    View on CSFloat
+                                  </button>
+                                )}
                               </div>
 
                               <span className="br_acc_section_label">{t("bot_running.deals.before_section")}</span>
