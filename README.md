@@ -27,24 +27,14 @@ Built for commercial distribution — complete with a Windows NSIS installer, DP
 
 ![Demo](./screenshots/animation.gif)
 
-<table>
-  <tr>
-    <td><img src="./screenshots/home.png" alt="Home" /></td>
-    <td><img src="./screenshots/bot-running.png" alt="Bot Running" /></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Home</em></td>
-    <td align="center"><em>Live deal dashboard</em></td>
-  </tr>
-  <tr>
-    <td><img src="./screenshots/calculate-price.png" alt="Calculate Price" /></td>
-    <td><img src="./screenshots/telegram.png" alt="Telegram alert" /></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Price calculator</em></td>
-    <td align="center"><em>Telegram deal alert</em></td>
-  </tr>
-</table>
+<p align="center">
+  <img src="./screenshots/home.png" width="48%" alt="Home screen" />
+  <img src="./screenshots/bot-running.png" width="48%" alt="Live deal dashboard" />
+</p>
+<p align="center">
+  <img src="./screenshots/calculate-price.png" width="48%" alt="Price calculator" />
+  <img src="./screenshots/telegram.png" width="48%" alt="Telegram deal alert" />
+</p>
 
 ---
 
@@ -73,23 +63,22 @@ Built for commercial distribution — complete with a Windows NSIS installer, DP
 
 ## Architecture
 
-```
-┌──────────────────────── Electron 41 ────────────────────────────┐
-│                                                                 │
-│   React 19 (Vite)       ◄──── IPC ────►   Electron Main         │
-│   MUI · Framer Motion                      safeStorage (DPAPI)  │
-│   react-i18next (4 langs)                                       │
-│           │                                                     │
-│        HTTP + SSE                                               │
-│           ▼                                                     │
-│   FastAPI (Python / uvicorn)                                    │
-│           │                                                     │
-└───────────┼─────────────────────────────────────────────────────┘
-            │
-     ┌──────┴──────────────────────────────────┐
-     ▼                                         ▼
-CSFloat Marketplace API             SQLite · Playwright · Telegram Bot
-(live listing stream)               (persistence · screenshots · alerts)
+```mermaid
+flowchart TD
+    subgraph Electron["Electron 41 Shell"]
+        UI["React 19 · Vite\nMUI · Framer Motion · i18n"]
+        EM["Electron Main\nsafeStorage (DPAPI)"]
+        PY["FastAPI · uvicorn\nBot · Deal validator · Trade tracker"]
+    end
+
+    UI <-->|IPC| EM
+    UI <-->|HTTP + SSE| PY
+    EM -->|spawn + inject credentials| PY
+
+    PY -->|live listings| CF["CSFloat\nMarketplace API"]
+    PY --> DB[(SQLite\ndeal history)]
+    PY --> PW["Playwright\nheadless Chromium"]
+    PW --> TG["Telegram Bot\nalerts + screenshots"]
 ```
 
 The Electron shell wraps both layers — spawning the Python backend as a child process in production and injecting credentials as environment variables. A per-session random token (DPAPI-encrypted) secures all HTTP traffic between the two layers.
