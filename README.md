@@ -28,12 +28,23 @@ Built for commercial distribution — complete with a Windows NSIS installer, DP
 ![Demo](./screenshots/animation.gif)
 
 <p align="center">
-  <img src="./screenshots/home.png" width="48%" alt="Home screen" />
-  <img src="./screenshots/bot-running.png" width="48%" alt="Live deal dashboard" />
+  <img src="./screenshots/home.png" width="70%" alt="Home screen" /><br/>
+  <sub>Home — landing page with the main feature cards</sub>
 </p>
+
 <p align="center">
-  <img src="./screenshots/calculate-price.png" width="48%" alt="Price calculator" />
-  <img src="./screenshots/telegram.png" width="48%" alt="Telegram deal alert" />
+  <img src="./screenshots/bot-running.png" width="70%" alt="Live deal dashboard" /><br/>
+  <sub>Live deal dashboard — active bot, deal accordion, and rejection feed</sub>
+</p>
+
+<p align="center">
+  <img src="./screenshots/calculate-price.png" width="70%" alt="Price calculator" /><br/>
+  <sub>Price calculator — sell range, profit estimate, and similar listed skins</sub>
+</p>
+
+<p align="center">
+  <img src="./screenshots/telegram.png" width="70%" alt="Telegram deal alert" /><br/>
+  <sub>Telegram alert — screenshot of the listing with buy price, float, and projected profit</sub>
 </p>
 
 ---
