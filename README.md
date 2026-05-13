@@ -23,29 +23,29 @@ Built for commercial distribution — complete with a Windows NSIS installer, DP
 
 ---
 
-## Screenshots
+## Preview
 
 ![Demo](./screenshots/animation.gif)
 
-<p align="center">
-  <img src="./screenshots/home.png" width="70%" alt="Home screen" /><br/>
-  <sub>Home — landing page with the main feature cards</sub>
-</p>
+### Home screen
+The main landing page — launch the bot, calculate a skin's price, or sync your trade history to Excel.
 
-<p align="center">
-  <img src="./screenshots/bot-running.png" width="70%" alt="Live deal dashboard" /><br/>
-  <sub>Live deal dashboard — active bot, deal accordion, and rejection feed</sub>
-</p>
+<p align="center"><img src="./screenshots/home.png" width="80%" alt="Home screen" /></p>
 
-<p align="center">
-  <img src="./screenshots/calculate-price.png" width="70%" alt="Price calculator" /><br/>
-  <sub>Price calculator — sell range, profit estimate, and similar listed skins</sub>
-</p>
+### Live deal dashboard
+Active bot session with a real-time deal feed, buy price, float value, profit estimates, and a live rejection log.
 
-<p align="center">
-  <img src="./screenshots/telegram.png" width="70%" alt="Telegram deal alert" /><br/>
-  <sub>Telegram alert — screenshot of the listing with buy price, float, and projected profit</sub>
-</p>
+<p align="center"><img src="./screenshots/bot-running.png" width="80%" alt="Live deal dashboard" /></p>
+
+### Price calculator
+Enter a skin ID to get the recommended sell range, profit estimates, and a list of competing listings at similar floats.
+
+<p align="center"><img src="./screenshots/calculate-price.png" width="80%" alt="Price calculator" /></p>
+
+### Telegram alert
+Automated notification with a full listing screenshot, buy price, float value, and projected profit sent directly to your phone.
+
+<p align="center"><img src="./screenshots/telegram.png" width="80%" alt="Telegram deal alert" /></p>
 
 ---
 
