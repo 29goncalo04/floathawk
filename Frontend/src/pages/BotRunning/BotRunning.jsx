@@ -70,14 +70,18 @@ export default function BotRunning() {
   useEffect(() => {
     fetchStatus();
     const poll = setInterval(fetchStatus, 4000);
-    const tick = setInterval(() => forceRender((n) => n + 1), 1000);
     return () => {
       clearInterval(poll);
-      clearInterval(tick);
       clearTimeout(flashTimerRef.current);
       clearTimeout(bannerTimerRef.current);
     };
   }, []);
+
+  useEffect(() => {
+    if (status?.status !== "rate_limited") return;
+    const tick = setInterval(() => forceRender((n) => n + 1), 1000);
+    return () => clearInterval(tick);
+  }, [status?.status]);
 
   useEffect(() => {
     const handler = () => handleBack();
