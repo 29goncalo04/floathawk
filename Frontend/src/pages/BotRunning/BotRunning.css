@@ -367,6 +367,24 @@
   color: #34d399;
 }
 
+.br_acc_link_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  padding: 2px;
+  color: #334155;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: color 0.18s ease;
+  flex-shrink: 0;
+}
+
+.br_acc_link_btn:hover {
+  color: #818cf8;
+}
+
 .br_acc_chevron {
   font-size: 18px;
   color: #475569;

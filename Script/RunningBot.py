@@ -179,6 +179,7 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
                         if on_deal_found:
                             on_deal_found({
                                 "skin_name": info_for_message["skin"]["item"]["market_hash_name"],
+                                "skin_id":   info_for_message["skin"]["id"],
                                 "price":     cents_to_usd(info_for_message["skin"]["price"]),
                                 "float_val": info_for_message["skin"]["item"]["float_value"],
                                 "timestamp":  datetime.now(timezone.utc).replace(microsecond=0).isoformat(),

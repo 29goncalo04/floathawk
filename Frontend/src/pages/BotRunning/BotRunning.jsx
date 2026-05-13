@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from "motion/react";
-import { LuBot, LuBellRing } from "react-icons/lu";
+import { LuBot, LuBellRing, LuExternalLink } from "react-icons/lu";
 import { IoArrowBack } from "react-icons/io5";
 import { MdStop } from "react-icons/md";
 import { getBotStatus, stopBot } from "../../services/api";
@@ -254,6 +254,15 @@ export default function BotRunning() {
                         <span className="br_acc_name">{deal.skin_name}</span>
                         <div className="br_acc_header_right">
                           <span className="br_acc_price">${deal.price?.toFixed(2)}</span>
+                          {deal.skin_id && (
+                            <button
+                              className="br_acc_link_btn"
+                              onClick={(e) => { e.stopPropagation(); window.api.openExternal(`https://csfloat.com/item/${deal.skin_id}`); }}
+                              title="View on CSFloat"
+                            >
+                              <LuExternalLink size={13} />
+                            </button>
+                          )}
                           <span className={`br_acc_chevron ${isOpen ? "br_acc_chevron--open" : ""}`}>›</span>
                         </div>
                       </div>

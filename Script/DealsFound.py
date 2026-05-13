@@ -13,10 +13,10 @@ def found_a_deal_message(skin_name, skin_id, skin_price, skin_float, min_value_t
         f"▶ After comps listed:\n"
         f"  Sell: ${min_value_to_sell_after/100:.2f} – ${max_value_to_sell_after/100:.2f}\n"
         f"  Profit (post tax): ${min_profit_after/100:.2f} – ${max_profit_after/100:.2f} • ({min_profit_percentage_after:.1f}% – {max_profit_percentage_after:.1f}%)\n\n"
-        f"Similar Float: {'  '.join(f'${p:.2f}' for p in prices_filtered)}\n"
-        f"Lower Float:   {'  '.join(f'${p:.2f}' for p in prices_lower_floats_filtered)}\n"
-        f"Higher Float:  {'  '.join(f'${p:.2f}' for p in prices_higher_floats_filtered)}\n\n"
-        f"Comps listed:\n"
+        f"▶ Similar Float: {'  '.join(f'${p:.2f}' for p in prices_filtered)}\n"
+        f"▶ Lower Float:   {'  '.join(f'${p:.2f}' for p in prices_lower_floats_filtered)}\n"
+        f"▶ Higher Float:  {'  '.join(f'${p:.2f}' for p in prices_higher_floats_filtered)}\n\n"
+        f"▶ Comps listed:\n"
         f"{lowest_prices_for_similar_skins}"
     )
 

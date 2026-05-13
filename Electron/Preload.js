@@ -11,5 +11,6 @@ contextBridge.exposeInMainWorld("api", {
   copyExcelTemplate: (folder) => ipcRenderer.invoke("copy-excel-template", folder),
   openExcelFile: (filePath) => ipcRenderer.invoke("open-excel-file", filePath),
   checkExcelPath: (filePath) => ipcRenderer.invoke("check-excel-path", filePath),
+  openExternal: (url) => ipcRenderer.invoke("open-external", url),
   resetExcelFile: (filePath) => ipcRenderer.invoke("reset-excel-file", filePath),
 });

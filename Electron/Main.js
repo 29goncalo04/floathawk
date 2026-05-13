@@ -297,6 +297,12 @@ ipcMain.handle("reset-excel-file", (event, filePath) => {
   fs.writeFileSync(filePath, EXCEL_TEMPLATE);
 });
 
+ipcMain.handle("open-external", (_, url) => {
+  if (typeof url === "string" && url.startsWith("https://csfloat.com/")) {
+    shell.openExternal(url);
+  }
+});
+
 ipcMain.handle("open-excel-file", (event, filePath) => {
   if (!filePath || !filePath.endsWith(".xlsm")) return;
   shell.openPath(filePath);
