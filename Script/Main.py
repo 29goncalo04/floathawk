@@ -15,12 +15,6 @@ from CSFloat import get_balance_usd
 from DealsDB import init_db
 from paths import data_path
 
-if os.environ.get("DATA_DIR"):
-    import sys
-    _log = open(data_path("floathawk.log"), "a", encoding="utf-8", buffering=1)
-    sys.stdout = _log
-    sys.stderr = _log
-
 app = FastAPI()
 
 _excel_path: str | None = os.environ.get("EXCEL_PATH")
