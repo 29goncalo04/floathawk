@@ -4,7 +4,7 @@ from CSFloat import get_balance_usd, get_newest_skins
 from Notifier import screenshot_worker
 from deal_validator import is_a_good_deal
 from Timeout import save_timeout, load_timeout, TIMEOUT_FILE
-from utils import cents_to_usd
+from utils import cents_to_usd, parse_iso_timestamp
 
 from asyncio import Queue
 from datetime import datetime, timezone
@@ -13,7 +13,8 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
                       on_deal_found=None, on_deal_rejected=None, on_status_change=None):
     # on_status_change(status, resume_time, error_message=None)
     # status: "scanning" | "rate_limited" | "error"
-    seen_prices = {}  # skin_id -> price (cents) at last successful evaluation
+    seen_prices = {}   # skin_id -> price (cents) at last evaluation
+    min_seen_time = None  # newest created_at seen so far; old skins below this are skipped
     screenshot_queue = Queue()
     num_workers = 3  # number of concurrent screenshot tasks
     # Creates a reusable asynchronous HTTP session
@@ -138,8 +139,11 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
                 for skin in skins:
                     skin_id = str(skin["id"])
                     last_price = seen_prices.get(skin_id)
+                    skin_time = parse_iso_timestamp(skin["created_at"])
                     if last_price is not None and skin["price"] >= last_price:
                         continue  # already evaluated at this price or higher
+                    elif last_price is None and min_seen_time is not None and skin_time <= min_seen_time:
+                        continue  # old skin, not a price drop — skip
 
                     try:
                         is_good_deal, info_for_message = await is_a_good_deal(skin, session)
@@ -214,5 +218,8 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
             print("\n\n" + "-" * 120 + "\n\n")
             current_ids = {str(s["id"]) for s in skins}
             seen_prices = {k: v for k, v in seen_prices.items() if k in current_ids}
+            newest_time = parse_iso_timestamp(skins[0]["created_at"])
+            if min_seen_time is None or newest_time > min_seen_time:
+                min_seen_time = newest_time
             # Wait between 10 and 15 seconds before fetching the latest deals again, so the user doesn't hit the timeout too early
             await asyncio.sleep(random.uniform(10, 15))
