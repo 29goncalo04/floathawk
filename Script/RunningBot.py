@@ -145,6 +145,7 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
                         is_good_deal, info_for_message = await is_a_good_deal(skin, session)
                     except Exception as e:
                         print(f"[ERROR] processing skin: {e}")
+                        seen_prices[skin_id] = skin["price"]
                         if "403" in str(e):
                             # Cloudflare IP block — save timeout and wait before retrying
                             save_timeout(5)
