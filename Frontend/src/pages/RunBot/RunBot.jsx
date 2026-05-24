@@ -58,7 +58,8 @@ export default function RunBot() {
     const val = parseFloat(minFloatText);
     if (!isNaN(val)) {
       const clamped = Math.max(0, Math.min(val, floatRange[1] - 0.001));
-      const rounded = Math.round(clamped * 1000) / 1000;
+      let rounded = Math.round(clamped * 1000) / 1000;
+      if (rounded >= floatRange[1]) rounded = Math.round((floatRange[1] - 0.001) * 1000) / 1000;
       setFloatRange([rounded, floatRange[1]]);
       setMinFloatText(rounded.toFixed(3));
     } else {
@@ -69,8 +70,10 @@ export default function RunBot() {
   const commitMaxFloat = () => {
     const val = parseFloat(maxFloatText);
     if (!isNaN(val)) {
-      const clamped = Math.max(floatRange[0] + 0.001, Math.min(val, MAX_FLOAT));
-      const rounded = Math.round(clamped * 1000) / 1000;
+      const floor = Math.min(floatRange[0] + 0.001, MAX_FLOAT);
+      const clamped = Math.max(floor, Math.min(val, MAX_FLOAT));
+      let rounded = Math.round(clamped * 1000) / 1000;
+      if (rounded > MAX_FLOAT) rounded = MAX_FLOAT;
       setFloatRange([floatRange[0], rounded]);
       setMaxFloatText(rounded.toFixed(3));
     } else {

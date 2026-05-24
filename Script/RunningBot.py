@@ -144,7 +144,7 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
                     try:
                         is_good_deal, info_for_message = await is_a_good_deal(skin, session)
                     except Exception as e:
-                        print(f"\033[1;41mError processing skin: {e}\033[0m")
+                        print(f"[ERROR] processing skin: {e}")
                         if "403" in str(e):
                             # Cloudflare IP block — save timeout and wait before retrying
                             save_timeout(5)
@@ -206,7 +206,7 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
                                 "timestamp": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
                             })
             except Exception as e:
-                print(f"\033[1;41m{e}\033[0m")
+                print(f"[ERROR] bot loop: {e}")
                 if on_status_change:
                     on_status_change("error", None, str(e))
                 break

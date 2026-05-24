@@ -29,7 +29,7 @@ async def screenshot_worker(queue: Queue):
         try:
             browser = await p.chromium.launch(headless=True)
         except Exception as e:
-            print(f"\033[1;41mNotifier: failed to launch browser: {e}\033[0m")
+            print(f"[ERROR] Notifier: failed to launch browser: {e}")
             return
         try:
             while True:
@@ -55,7 +55,7 @@ async def screenshot_worker(queue: Queue):
                     await element.screenshot(path=output_path)
                     await send_message(msg, output_path)
                 except Exception as e:
-                    print(f"\033[1;41mNotifier error: {e}\033[0m")
+                    print(f"[ERROR] Notifier: {e}")
                 finally:
                     await page.close()
                     if os.path.exists(output_path):

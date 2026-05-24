@@ -43,12 +43,12 @@ def get_newest_skins(min_float, max_float, min_price, max_price):
     
     except requests.exceptions.HTTPError as e:
         if e.response is not None and e.response.status_code == 401:
-            print(f"\033[1;41mInvalid CSFloat API key (401 Unauthorized)\033[0m")
+            print(f"[ERROR] Invalid CSFloat API key (401 Unauthorized)")
             return None  # signals auth failure, not rate limit
-        print(f"\033[1;41mError fetching CSFloat data: {e}\033[0m")
+        print(f"[ERROR] fetch CSFloat data: {e}")
         return []
     except Exception as e:
-        print(f"\033[1;41mError fetching CSFloat data: {e}\033[0m")
+        print(f"[ERROR] fetch CSFloat data: {e}")
         return []
 
 
@@ -147,7 +147,7 @@ async def fetch_similar_listed(min_float, max_float, def_index, paint_index, ses
             return data.get("data", [])
     except Exception as e:
         # If it falls here it means the account got a timeout for doing too many requests and the program needs to wait before doing requests again
-        print(f"\033[1;41mError fetching CSFloat similar listed data: {e}\033[0m")
+        print(f"[ERROR] fetch_similar_listed: {e}")
         return None
     
 
