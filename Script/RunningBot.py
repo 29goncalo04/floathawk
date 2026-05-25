@@ -13,8 +13,7 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
                       on_deal_found=None, on_deal_rejected=None, on_status_change=None):
     # on_status_change(status, resume_time, error_message=None)
     # status: "scanning" | "rate_limited" | "error"
-    seen_prices = {}   # skin_id -> price (cents) at last evaluation
-    min_seen_time = None  # newest created_at seen so far; old skins below this are skipped
+    min_seen_time = None
     screenshot_queue = Queue()
     num_workers = 3  # number of concurrent screenshot tasks
     # Creates a reusable asynchronous HTTP session
@@ -137,19 +136,13 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
             try:
                 # It checks for every new deal if it is a good or a bad one (based on what the 'is_a_good_deal' returns)
                 for skin in skins:
-                    skin_id = str(skin["id"])
-                    last_price = seen_prices.get(skin_id)
-                    skin_time = parse_iso_timestamp(skin["created_at"])
-                    if last_price is not None and skin["price"] >= last_price:
-                        continue  # already evaluated at this price or higher
-                    elif last_price is None and min_seen_time is not None and skin_time <= min_seen_time:
-                        continue  # old skin, not a price drop — skip
+                    if min_seen_time is not None and parse_iso_timestamp(skin["created_at"]) <= min_seen_time:
+                        break
 
                     try:
                         is_good_deal, info_for_message = await is_a_good_deal(skin, session)
                     except Exception as e:
                         print(f"[ERROR] processing skin: {e}")
-                        seen_prices[skin_id] = skin["price"]
                         if "403" in str(e):
                             # Cloudflare IP block — save timeout and wait before retrying
                             save_timeout(5)
@@ -170,8 +163,6 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
                                 on_status_change("scanning", None)
                             break
                         continue
-
-                    seen_prices[skin_id] = skin["price"]
 
                     # If the deal seems to be profitable, it puts the information to write the message into the asynchronous
                     # queue to be processed by the worker
@@ -216,8 +207,6 @@ async def running_bot(min_float, max_float, min_price, max_price, max_price_is_c
                     on_status_change("error", None, str(e))
                 break
             print("\n\n" + "-" * 120 + "\n\n")
-            current_ids = {str(s["id"]) for s in skins}
-            seen_prices = {k: v for k, v in seen_prices.items() if k in current_ids}
             newest_time = parse_iso_timestamp(skins[0]["created_at"])
             if min_seen_time is None or newest_time > min_seen_time:
                 min_seen_time = newest_time
